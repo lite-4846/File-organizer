@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 # File organizer
 
@@ -31,7 +30,3 @@ There are Three commands :
 ```bash
   node main.js help
 ```
-=======
-# File-organizer
-Organizes your folder content into subfolders with categories like videos, app, images and etc...
->>>>>>> 6a7b062a5a8aa64968890804eb26d8b2a43d06ef
