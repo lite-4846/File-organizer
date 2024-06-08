@@ -9,24 +9,26 @@ const types = utility.types;
 module.exports.organizeFn =  (dirPath) => {
   // console.log('Executed organize', dirPath);
   // 1. input => directory path given
+
+
   if (!dirPath) {
-    let destPath = process.cwd();
-    return;
+    dirPath = process.cwd();
   }
-  let destPath;
+
+  
   let doesExist = fs.existsSync(dirPath);
   if (doesExist) {
     // 2. create => organized_files (directory)
 
-    destPath = path.join(dirPath, 'organized_files');
+    let destPath = path.join(dirPath, 'Organized_Files');
     if (!fs.existsSync(destPath)) {
       fs.mkdirSync(destPath);
     }
+    organizeHelper(dirPath, destPath);
   } else {
     console.log('Invalid path');
     return;
   }
-  organizeHelper(dirPath, destPath);
 }
 
 function organizeHelper(src, dest) {
